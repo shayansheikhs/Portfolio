@@ -16,7 +16,7 @@ export interface Testimonial {
   id: string;
   name: string;
   role: string;
-  company: string;
+  company?: string;
   text: string;
   rating: number;
   initials: string;

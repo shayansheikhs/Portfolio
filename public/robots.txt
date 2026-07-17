@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shayansheikh.com/sitemap.xml

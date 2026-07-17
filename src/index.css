@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@variant light (.light &);
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", var(--font-sans);
+  --font-mono: "Fira Code", monospace;
+
+  --color-dark-bg: #050505;
+  --color-dark-card: #0d0e15;
+  --color-light-bg: #f8fafc;
+  --color-light-card: #ffffff;
+
+  /* Nordic Cyan & Electric Blue overrides */
+  --color-emerald-50: #f0f9ff;
+  --color-emerald-100: #e0f2fe;
+  --color-emerald-200: #bae6fd;
+  --color-emerald-300: #7dd3fc;
+  --color-emerald-400: #38bdf8; /* Vibrant Sky Blue */
+  --color-emerald-500: #0284c7; /* Deep Electric Blue */
+  --color-emerald-600: #0369a1;
+  --color-emerald-700: #075985;
+  --color-emerald-800: #0c4a6e;
+  --color-emerald-900: #0a3a5c;
+  
+  --color-teal-50: #ecfeff;
+  --color-teal-100: #cffafe;
+  --color-teal-200: #a5f3fc;
+  --color-teal-300: #67e8f9;
+  --color-teal-400: #22d3ee; /* Bright Neon Cyan */
+  --color-teal-500: #06b6d4;
+  --color-teal-600: #0891b2;
+  --color-teal-700: #0e7490;
+  --color-teal-800: #155e75;
+  --color-teal-900: #164e63;
+}
+
+/* Prevent duplicate scrollbars — html is the ONLY scroll container */
+html {
+  overflow-x: clip;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+body {
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+#root {
+  overflow: visible;
+}
+
+/* Scroll lock when modal is open */
+html.overflow-hidden, body.overflow-hidden {
+  overflow-y: hidden !important;
+}
+
+/* Custom styles for text-stroke and bold outlines */
+.text-outline-dark {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.25);
+  color: transparent;
+}
+.light .text-outline-dark {
+  -webkit-text-stroke: 1.5px rgba(15, 23, 42, 0.25);
+  color: transparent;
+}
+
+/* Custom Scrollbar — themed Nordic Cyan & Electric Blue */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+.light ::-webkit-scrollbar-track {
+  background: #f0f9ff;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0891b2, #0284c7);
+  border-radius: 4px;
+}
+.light ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #22d3ee, #38bdf8);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #22d3ee, #38bdf8);
+}
+
+/* Custom styles & animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 15s infinite ease-in-out;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Glassmorphism details */
+.glass-panel {
+  background: rgba(18, 20, 32, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Grid overlay background */
+.grid-bg {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.light .grid-bg {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+}
+
+/* Custom glow borders on hover */
+.glow-card-green:hover {
+  box-shadow: 0 0 25px -5px rgba(34, 211, 238, 0.25);
+  border-color: rgba(34, 211, 238, 0.4);
+}
+
+.glow-card-blue:hover {
+  box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.25);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.glow-card-indigo:hover {
+  box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.25);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.glow-card-purple:hover {
+  box-shadow: 0 0 25px -5px rgba(168, 85, 247, 0.25);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+/* Custom Preloader Spinner */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Custom browser scroll mockup */
+.scroll-mockup {
+  background-position: top center;
+  transition: background-position 5s ease-in-out !important;
+}
+
+.group\/mockup:hover .scroll-mockup {
+  background-position: bottom center;
+}
+
+/* Scroll Reveal Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1000ms cubic-bezier(0.16, 1, 0.3, 1), transform 1000ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animated Gradient Text */
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-text {
+  background-size: 200% auto;
+  animation: gradient-flow 4s ease-in-out infinite;
+}
+
+/* Logo Marquee */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Navbar Active Underline */
+.nav-indicator {
+  transition: left 300ms cubic-bezier(0.16, 1, 0.3, 1), width 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Modal Scale In Animation */
+@keyframes scale-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 250ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+

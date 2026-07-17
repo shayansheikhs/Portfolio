@@ -80,10 +80,7 @@ export default function Testimonials() {
                   {TESTIMONIALS_DATA[activeIndex].name}
                 </cite>
                 <span className="text-xs font-mono text-gray-500 block mt-0.5">
-                  {TESTIMONIALS_DATA[activeIndex].role} at{' '}
-                  <span className="text-emerald-400 dark:text-emerald-400 light:text-emerald-600 font-semibold">
-                    {TESTIMONIALS_DATA[activeIndex].company}
-                  </span>
+                  {TESTIMONIALS_DATA[activeIndex].role}
                 </span>
               </div>
             </div>

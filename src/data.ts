@@ -400,7 +400,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     name: 'Hamza Rehman',
     role: 'E-Commerce Director',
     company: 'UrbanStore PK',
-    text: "Shayan Sheikh ek kabil developer hai. Usne hamare purane Shopify store ko OS 2.0 par migrate kiya. Mobile load speed adhi ho gayi aur conversion rate 25% barh gayi. Bohot acha kaam hai, highly recommended!",
+    text: "Shayan Sheikh is a highly skilled developer. He migrated our legacy Shopify store to a fully tailored OS 2.0 framework. Our mobile page load speed was cut in half, and our conversion rate bumped up by 25%. Exceptional work, highly recommended!",
     rating: 5,
     initials: 'HR',
     bgGradient: 'from-emerald-500/10 to-teal-500/10'
@@ -410,7 +410,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     name: 'Sana Tariq',
     role: 'Store Owner',
     company: 'PrintCraft PK',
-    text: "Hamare WordPress plugin ka kaam bohot complex tha. Pehle do developers ne mana kar diya tha. Shayan ne pure PHP/AJAX se bilkul cleanly banaya. Website ab super fast hai aur customers ko bohot pasand hai!",
+    text: "Our custom WordPress plugin requirements were extremely complex. Two previous developers told us it wasn't possible. Shayan built it with clean PHP/AJAX flawlessly. The site is now lightning fast and our customers love it!",
     rating: 5,
     initials: 'ST',
     bgGradient: 'from-blue-500/10 to-indigo-500/10'
@@ -420,7 +420,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
     name: 'Bilal Siddiqui',
     role: 'E-Commerce Manager',
     company: 'TechMart PK',
-    text: "Shayan ne hamare BigCommerce store ka poora backend structure redesign kiya aur custom order management tools banaye jo hamari team ke liye bohot helpful hain. Kaam bilkul professional tha aur time par deliver kiya. Highly recommended!",
+    text: "Shayan redesigned the entire backend structure of our BigCommerce store and built custom order management tools that saved our team hours of manual work. Very professional service and delivered right on schedule. Highly recommended!",
     rating: 5,
     initials: 'BS',
     bgGradient: 'from-violet-500/10 to-pink-500/10'

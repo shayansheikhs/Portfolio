@@ -89,7 +89,7 @@ export default function About() {
                   
                   {/* Experience Badge */}
                   <div className="absolute bottom-4 left-4 right-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
-                    <span className="font-mono text-xs font-bold text-emerald-400 dark:text-emerald-400 light:text-emerald-600">⚡ 2+ Years Professional Experience</span>
+                    <span className="font-mono text-xs font-bold text-emerald-400 dark:text-emerald-400 light:text-emerald-600">⚡ 3+ Years Professional Experience</span>
                   </div>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function About() {
             </h2>
 
             <p className="text-gray-400 dark:text-gray-400 light:text-slate-600 font-sans leading-relaxed mb-6">
-              I am Shayan Sheikh, a dedicated WordPress Developer and Shopify Developer with 2 years of professional experience in website development, theme customization, and e-commerce store development. I bridge the gap between creative visual designs and powerful technical performance to build websites that aren't just beautiful, but drive maximum conversions.
+              I am Shayan Sheikh, a dedicated WordPress Developer and Shopify Developer with 3 years of professional experience in website development, theme customization, and e-commerce store development. I bridge the gap between creative visual designs and powerful technical performance to build websites that aren't just beautiful, but drive maximum conversions.
             </p>
 
             <p className="text-gray-400 dark:text-gray-400 light:text-slate-600 font-sans leading-relaxed mb-8">
@@ -119,7 +119,7 @@ export default function About() {
               </div>
 
               <div className="text-center md:text-left">
-                <Counter end={2} suffix="+" />
+                <Counter end={3} suffix="+" />
                 <p className="text-xs font-semibold text-gray-400 dark:text-gray-400 light:text-slate-600 mt-2 font-display">Years Experience</p>
               </div>
 

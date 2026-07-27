@@ -88,7 +88,7 @@ export default function About() {
                   </div>
                   
                   {/* Experience Badge */}
-                  <div className="absolute bottom-4 left-4 right-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
+                  <div className="mt-6 w-full py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
                     <span className="font-mono text-xs font-bold text-emerald-400 dark:text-emerald-400 light:text-emerald-600">⚡ 3+ Years Professional Experience</span>
                   </div>
                 </div>

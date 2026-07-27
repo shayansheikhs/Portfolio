@@ -170,24 +170,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Social Platforms Row */}
-            <div>
-              <p className="text-xs font-mono font-bold text-gray-500 uppercase tracking-widest mb-4">Contractor Portals:</p>
-              <div className="grid grid-cols-2 gap-3">
-                {socialLinks.map((soc) => (
-                  <a
-                    key={soc.label}
-                    href={soc.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-between p-3 rounded-lg bg-white/5 dark:bg-white/5 light:bg-black/5 border border-white/5 dark:border-white/5 light:border-slate-200 hover:bg-white/10 dark:hover:bg-white/10 light:hover:bg-slate-50 text-xs text-gray-400 hover:text-emerald-400 transition-all"
-                  >
-                    <span>{soc.label}</span>
-                    <ExternalLink size={12} className="text-gray-600" />
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Contact Interactive Form Panel (Col 7) */}

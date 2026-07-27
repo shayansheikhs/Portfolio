@@ -47,11 +47,14 @@ export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     };
   }, [isOpen]);
 
@@ -166,7 +169,7 @@ export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed top-[70px] left-0 right-0 p-6 mx-4 rounded-2xl bg-[#0a0f1c]/95 dark:bg-[#0a0f1c]/95 light:bg-white/95 backdrop-blur-2xl shadow-2xl transition-all duration-300 lg:hidden flex flex-col gap-4 border border-white/10 z-50 ${
+        className={`fixed top-[70px] left-0 right-0 p-6 mx-4 rounded-2xl bg-white dark:bg-[#0a0f1c] shadow-2xl transition-all duration-300 lg:hidden flex flex-col gap-4 border border-black/10 dark:border-white/10 z-50 ${
           isOpen
             ? 'opacity-100 translate-y-0 visible'
             : 'opacity-0 -translate-y-4 invisible pointer-events-none'
